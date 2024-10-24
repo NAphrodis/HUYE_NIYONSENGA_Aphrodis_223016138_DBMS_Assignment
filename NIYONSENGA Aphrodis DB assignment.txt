@@ -1,0 +1,249 @@
+
+  
+  
+mysql> CREATE DATABASE ruhande;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> USE ruhande;
+Database changed
+mysql> CREATE TABLE ngoma(ID INT(16) NOT NULL, F_name CHAR(20), L_name CHAR(20), Province CHAR(20), District CHAR(20), Sector CHAR(20), Cell CHAR(20), Gender CHAR(1), E_mail CHAR(40), Tele_number INT(10) NOT NULL);
+Query OK, 0 rows affected, 2 warnings (0.02 sec)
+
+mysql> INSERT INTO ngoma VALUES('001', 'NIYONSENGA', 'Aphrodis', 'South', 'Huye', 'Ngoma', 'Mukoni', 'M', 'niyonsengaaphrodis36@gmail.com', '0792448519');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO ngoma VALUES('002', 'Habarurema', 'Gahungu', 'South', 'Huye', 'Ngoma', 'Mukoni', 'M', 'habaruremag6@gmail.com', '0782748519');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO ngoma VALUES('003', 'Mutoni', 'Grace', 'South', 'Huye', 'Ngoma', 'Rugerero', 'M', 'mutonigrace@gmail.com', '076467474');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO ngoma VALUES('004', 'NIYIKIZA', 'Emmy', 'South', 'Huye', 'Ngoma', 'Mukoni', 'F', 'niyikizaemmy@gmail.com', '0787498519');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO ngoma VALUES('005', 'Uwanyirigira', 'Odette', 'South', 'Huye', 'Ngoma', 'Batima', 'F', 'uwanyirigiraodette@gmail.com', '076468519');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO ngoma VALUES('008', 'Uwineza', 'Fortune', 'South', 'Huye', 'Ngoma', 'Mamba', 'F', 'uwinezafortune@gmail.com', '078265519');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO ngoma VALUES('001', 'IRANKUNDA', 'Ful', 'South', 'Huye', 'Ngoma', 'Cyarwa', 'M', 'irankunda ful36@gmail.com', '076668519');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO ngoma VALUES('009', 'Ukwishaka', 'Erik', 'South', 'Huye', 'Ngoma', 'Mukoni', 'M', 'ukwishakaeric6@gmail.com', '073333449');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO ngoma VALUES('010', 'Uwimpuhwe', 'Cloudine', 'South', 'Huye', 'Ngoma', 'Tumba', 'F', 'uwimpuhweclo@gmail.com', '0792466677');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT* FROM ngoma;
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | M      | mutonigrace@gmail.com          |    76467474 |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 |
+|  1 | IRANKUNDA    | Ful      | South    | Huye     | Ngoma  | Cyarwa   | M      | irankunda ful36@gmail.com      |    76668519 |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+9 rows in set (0.00 sec)
+
+mysql> INSERT INTO ngoma VALUES('44', 'Isabane', 'Jeane', 'South', 'Huye', 'Ngoma', 'Mukoni', 'M', 'isabanejean6@gmail.com', '079888889');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT* FROM ngoma;
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | M      | mutonigrace@gmail.com          |    76467474 |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 |
+|  1 | IRANKUNDA    | Ful      | South    | Huye     | Ngoma  | Cyarwa   | M      | irankunda ful36@gmail.com      |    76668519 |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 |
+| 44 | Isabane      | Jeane    | South    | Huye     | Ngoma  | Mukoni   | M      | isabanejean6@gmail.com         |    79888889 |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE ngoma ADD Category CHAR(20) NOT NULL;
+Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT* FROM ngoma;
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number | Category |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 |          |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 |          |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | M      | mutonigrace@gmail.com          |    76467474 |          |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 |          |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 |          |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 |          |
+|  1 | IRANKUNDA    | Ful      | South    | Huye     | Ngoma  | Cyarwa   | M      | irankunda ful36@gmail.com      |    76668519 |          |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 |          |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 |          |
+| 44 | Isabane      | Jeane    | South    | Huye     | Ngoma  | Mukoni   | M      | isabanejean6@gmail.com         |    79888889 |          |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+10 rows in set (0.00 sec)
+
+mysql> UPDATE ngoma SET Gender='F' WHERE ID='003';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM ngoma;
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number | Category |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 |          |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 |          |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | F      | mutonigrace@gmail.com          |    76467474 |          |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 |          |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 |          |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 |          |
+|  1 | IRANKUNDA    | Ful      | South    | Huye     | Ngoma  | Cyarwa   | M      | irankunda ful36@gmail.com      |    76668519 |          |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 |          |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 |          |
+| 44 | Isabane      | Jeane    | South    | Huye     | Ngoma  | Mukoni   | M      | isabanejean6@gmail.com         |    79888889 |          |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT ID,F_name, Province, District, Tele_number FROM ngoma;
++----+--------------+----------+----------+-------------+
+| ID | F_name       | Province | District | Tele_number |
++----+--------------+----------+----------+-------------+
+|  1 | NIYONSENGA   | South    | Huye     |   792448519 |
+|  2 | Habarurema   | South    | Huye     |   782748519 |
+|  3 | Mutoni       | South    | Huye     |    76467474 |
+|  4 | NIYIKIZA     | South    | Huye     |   787498519 |
+|  5 | Uwanyirigira | South    | Huye     |    76468519 |
+|  8 | Uwineza      | South    | Huye     |    78265519 |
+|  1 | IRANKUNDA    | South    | Huye     |    76668519 |
+|  9 | Ukwishaka    | South    | Huye     |    73333449 |
+| 10 | Uwimpuhwe    | South    | Huye     |   792466677 |
+| 44 | Isabane      | South    | Huye     |    79888889 |
++----+--------------+----------+----------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT* FROM ngoma WHERE ID='1' AND Cell='Mukoni';
++----+------------+----------+----------+----------+--------+--------+--------+--------------------------------+-------------+----------+
+| ID | F_name     | L_name   | Province | District | Sector | Cell   | Gender | E_mail                         | Tele_number | Category |
++----+------------+----------+----------+----------+--------+--------+--------+--------------------------------+-------------+----------+
+|  1 | NIYONSENGA | Aphrodis | South    | Huye     | Ngoma  | Mukoni | M      | niyonsengaaphrodis36@gmail.com |   792448519 |          |
++----+------------+----------+----------+----------+--------+--------+--------+--------------------------------+-------------+----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT* FROM ngoma WHERE Cell='Mukoni' OR Gender='F';
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number | Category |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 |          |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 |          |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | F      | mutonigrace@gmail.com          |    76467474 |          |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 |          |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 |          |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 |          |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 |          |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 |          |
+| 44 | Isabane      | Jeane    | South    | Huye     | Ngoma  | Mukoni   | M      | isabanejean6@gmail.com         |    79888889 |          |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+9 rows in set (0.00 sec)
+
+mysql> UPDATE ngoma SET Category='2' WHERE Gender='F';
+Query OK, 5 rows affected (0.00 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> UPDATE ngoma SET Category='4' WHERE Gender='M';
+Query OK, 5 rows affected (0.00 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> SELECT* FROM ngoma;
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number | Category |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 | 4        |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 | 4        |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | F      | mutonigrace@gmail.com          |    76467474 | 2        |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 | 2        |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 | 2        |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 | 2        |
+|  1 | IRANKUNDA    | Ful      | South    | Huye     | Ngoma  | Cyarwa   | M      | irankunda ful36@gmail.com      |    76668519 | 4        |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 | 4        |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 | 2        |
+| 44 | Isabane      | Jeane    | South    | Huye     | Ngoma  | Mukoni   | M      | isabanejean6@gmail.com         |    79888889 | 4        |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+----------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE ngoma DROP COLUMN Category;
+Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT* FROM ngoma;
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | F      | mutonigrace@gmail.com          |    76467474 |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 |
+|  1 | IRANKUNDA    | Ful      | South    | Huye     | Ngoma  | Cyarwa   | M      | irankunda ful36@gmail.com      |    76668519 |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 |
+| 44 | Isabane      | Jeane    | South    | Huye     | Ngoma  | Mukoni   | M      | isabanejean6@gmail.com         |    79888889 |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> INSERT INTO ngoma VALUES('014', 'Niyomukiza', 'Aphrozic', 'South', 'Huye', 'Cyarwa', 'Gateme', 'M', 'niyonsengaaphrozic36@gmail.com', '079553377');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> UPDATE ngoma SET ID='1' WHERE F_name='IRANKUNDA';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> SELECT* FROM ngoma;
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | F      | mutonigrace@gmail.com          |    76467474 |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 |
+|  1 | IRANKUNDA    | Ful      | South    | Huye     | Ngoma  | Cyarwa   | M      | irankunda ful36@gmail.com      |    76668519 |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 |
+| 44 | Isabane      | Jeane    | South    | Huye     | Ngoma  | Mukoni   | M      | isabanejean6@gmail.com         |    79888889 |
+| 14 | Niyomukiza   | Aphrozic | South    | Huye     | Cyarwa | Gateme   | M      | niyonsengaaphrozic36@gmail.com |    79553377 |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+11 rows in set (0.00 sec)
+
+mysql> UPDATE ngoma SET ID='011' WHERE F_name='IRANKUNDA';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT* FROM ngoma;
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+| ID | F_name       | L_name   | Province | District | Sector | Cell     | Gender | E_mail                         | Tele_number |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+|  1 | NIYONSENGA   | Aphrodis | South    | Huye     | Ngoma  | Mukoni   | M      | niyonsengaaphrodis36@gmail.com |   792448519 |
+|  2 | Habarurema   | Gahungu  | South    | Huye     | Ngoma  | Mukoni   | M      | habaruremag6@gmail.com         |   782748519 |
+|  3 | Mutoni       | Grace    | South    | Huye     | Ngoma  | Rugerero | F      | mutonigrace@gmail.com          |    76467474 |
+|  4 | NIYIKIZA     | Emmy     | South    | Huye     | Ngoma  | Mukoni   | F      | niyikizaemmy@gmail.com         |   787498519 |
+|  5 | Uwanyirigira | Odette   | South    | Huye     | Ngoma  | Batima   | F      | uwanyirigiraodette@gmail.com   |    76468519 |
+|  8 | Uwineza      | Fortune  | South    | Huye     | Ngoma  | Mamba    | F      | uwinezafortune@gmail.com       |    78265519 |
+| 11 | IRANKUNDA    | Ful      | South    | Huye     | Ngoma  | Cyarwa   | M      | irankunda ful36@gmail.com      |    76668519 |
+|  9 | Ukwishaka    | Erik     | South    | Huye     | Ngoma  | Mukoni   | M      | ukwishakaeric6@gmail.com       |    73333449 |
+| 10 | Uwimpuhwe    | Cloudine | South    | Huye     | Ngoma  | Tumba    | F      | uwimpuhweclo@gmail.com         |   792466677 |
+| 44 | Isabane      | Jeane    | South    | Huye     | Ngoma  | Mukoni   | M      | isabanejean6@gmail.com         |    79888889 |
+| 14 | Niyomukiza   | Aphrozic | South    | Huye     | Cyarwa | Gateme   | M      | niyonsengaaphrozic36@gmail.com |    79553377 |
++----+--------------+----------+----------+----------+--------+----------+--------+--------------------------------+-------------+
+11 rows in set (0.00 sec)
